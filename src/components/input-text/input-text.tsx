@@ -13,6 +13,7 @@ export class InputText extends React.Component<InputTextProps, InputTextState> {
       value: '',
     };
   }
+  changingValue(value: string) {}
   render() {
     return <input placeholder={this.props.placeholder} />;
   }

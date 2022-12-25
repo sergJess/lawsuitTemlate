@@ -1,5 +1,6 @@
 import React from 'react';
 import './inputs-fields.css';
+import { InputText } from 'components/input-text/input-text';
 type InputsFieldProps = {
   childrenInputs: Array<JSX.Element>;
 };
