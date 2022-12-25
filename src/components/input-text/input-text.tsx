@@ -1,7 +1,8 @@
 import React from 'react';
 import './input-text.css';
-type InputTextProps = {
+export type InputTextProps = {
   placeholder: string;
+  id: number;
 };
 type InputTextState = {
   value: string;
