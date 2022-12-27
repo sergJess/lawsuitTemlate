@@ -1,6 +1,19 @@
 export class SuitTemplate {
   private initialTemplate = {
     plaintiff: '',
+    powerOfAttorneyNumber: '',
+    powerOfAttorneyDate: '',
+    plaintiffPhone: '',
+    plaintiffAdress: '',
+    defandantFullName: '',
+    defandantShortName: '',
+    defandantINN: '',
+    defandantOGRN: '',
+    defandantAdress: '',
+    suitPrice: '',
+    fee: '',
+    contractNumber: '',
+    contractDate: '',
   };
   private textTemplate = `№ ______
 «___» _________ 2021г.
@@ -18,28 +31,22 @@ export class SuitTemplate {
 ул. Заречная, стр. 6
 Представитель взыскателя:
 ${this.initialTemplate.plaintiff}
-(доверенность № 10 от 21.05.2018г.)
-Адрес: 141800, Московская обл.,
-г. Дмитров, мкр. им. Константина
-Аверьянова, д. 25, кв. 223
-Тел. +7(968)082-17-90
+(доверенность № ${this.initialTemplate.powerOfAttorneyNumber} от ${this.initialTemplate.powerOfAttorneyDate}г.)
+Адрес: ${this.initialTemplate.plaintiffAdress}
+Тел. ${this.initialTemplate.plaintiffPhone}
 Ответчик:
-Общество с ограниченной
-ответственностью «Торговый Дом
-«МарвинГрупп»
-(ООО «ТД «МарвинГрупп»)
-ИНН 5047096089
-ОГРН 1085047007374
-Место нахождения: 141400, Московская обл.,
-г. Химки, микрорайон Сходня, ул. Вишневая,
-д. 12, оф. 83
-Цена иска: 359 705,53 рублей
-Государственная пошлина: 10 194 рубля
+${this.initialTemplate.defandantFullName}
+(${this.initialTemplate.defandantShortName})
+ИНН ${this.initialTemplate.defandantINN}
+ОГРН ${this.initialTemplate.defandantOGRN}
+Место нахождения: ${this.initialTemplate.defandantAdress}
+Цена иска: ${this.initialTemplate.suitPrice} рублей
+Государственная пошлина: ${this.initialTemplate.fee} рубля
 
 ИСКОВОЕ ЗАЯВЛЕНИЕ
 
-Между ООО «СНБ ИНВЕСТ» (Арендодателем) и ООО «ТД «МарвинГрупп»
-(Арендатором) был заключен договор аренды № 01-104 от 01 октября 2020г. (далее по тексту –
+Между ООО «СНБ ИНВЕСТ» (Арендодателем) и ${this.initialTemplate.defandantShortName}
+(Арендатором) был заключен договор аренды № ${this.initialTemplate.contractNumber} от ${this.initialTemplate.contractDate}г. (далее по тексту –
 Договор). Согласно указанному Договору, Арендодатель предоставил, а Арендатор принял во
 временное владение и пользование комнаты № 26, 27, 28, 29 и 32, расположенные по адресу:
 125438, г. Москва, ул. Михалковская, д. 63Б, стр.1, этаж 2, пом. VI.
